@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "otsos-space-app",
+  "version": "0.1.0",
+  "description": "",
   "engines": {
     "node": "12.x"
   },
@@ -20,12 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "git+https://github.com/otsohelos/otsos-space-app.git"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Otso Helos"
 }
