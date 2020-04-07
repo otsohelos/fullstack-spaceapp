@@ -1,37 +1,21 @@
 {
   "name": "otsos-space-app",
-  "version": "0.1.0",
-  "description": "",
-  "engines": {
-    "node": "12.x"
-  },
+  "version": "0.0.1",
+  "description": "space-themed full stack app demo",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
+  "author": "Otso Helos",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
-    "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "react-router-dom": "^5.1.2",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/otsohelos/otsos-space-app.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT",
-  "author": "Otso Helos"
+    "nodemon": "^2.0.2"
+  }
 }
