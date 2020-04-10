@@ -1,0 +1,12 @@
+# Work Hours Log
+
+| day | hours | what I did  |
+| :----:|:-----| :-----|
+| 20 Mar | 4 | starting project, writing documentation |
+| 25 Mar | 7 | Router, CSS, started work on reducers |
+| 27 Mar | 5 | Mars weather view & reducer added |
+| 3 Apr | 3 | Building the app for Heroku |
+| 7 Apr | 6 | Building rudimentary backend; comments and image search; first wirking Heroku deployment done |
+| 10 Apr |  | SRS cleaned up; search reducer |
+
+Total hours 25
