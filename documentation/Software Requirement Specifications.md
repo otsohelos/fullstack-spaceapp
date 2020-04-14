@@ -35,10 +35,14 @@ NasaApp will use NASA's public APIs as its backend. Comments will have a backend
 - Possibility to leave comments
 - Email notifications for comments
 
+### General
+- Error notifications
+
 ## Additional features
 These features will be implemented if there's time.
 
 ## Todo
+- multiple word search
 - error handling
-- error notifications
 - wait animation
+- custom hook
