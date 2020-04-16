@@ -2,6 +2,10 @@
 
 Full stack practical work by Otso Helos. Full Stack class spring 2020, University of Helsinki.
 
+## SpaceApp
+
+SpaceApp is a web-based app that allows a search for NASA's image of the day, weather on Mars, and other NASA data.
+
 # Links
 
 [Work hours log](https://github.com/otsohelos/fullstack-spaceapp/blob/master/documentation/WorkHoursLog.md)

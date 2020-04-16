@@ -27,7 +27,7 @@ NasaApp will use NASA's public APIs as its backend. Comments will have a backend
 - Flavor picture(s) of Mars
 
 ### Image Search
-- Search function for Nasa image database
+- Search function for Nasa image database (DONE for single words)
 - Search by keyword(s), year range, media type (image/video)
 
 ### Comments
@@ -42,7 +42,6 @@ NasaApp will use NASA's public APIs as its backend. Comments will have a backend
 These features will be implemented if there's time.
 
 ## Todo
-- multiple word search
-- error handling
+- more error handling
 - wait animation
-- custom hook
+- custom hooks

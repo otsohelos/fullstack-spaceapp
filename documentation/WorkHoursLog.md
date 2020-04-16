@@ -8,6 +8,6 @@
 | 3 Apr | 3 | Building the app for Heroku |
 | 7 Apr | 6 | Building rudimentary backend; comments and image search; first wirking Heroku deployment done |
 | 10 Apr | 4 | SRS cleaned up; search reducer done; search works for single words |
-| 14 Apr |  | CSS work; past days' APODs; notifications |
+| 14 Apr | 5 | CSS work; past days' APODs; notifications |
 
 Total hours 29
