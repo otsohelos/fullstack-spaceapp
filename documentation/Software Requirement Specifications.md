@@ -9,8 +9,11 @@ SpaceApp is a web-based app that allows a search for NASA's image of the day, ot
 NasaApp will be browsable without logging in, but will also have a comment function available for logged in users.
 
 ## Platforms and frameworks
+The frontend of SpaceApp is done in React and TypeScript. The backend will be made in Node and TypeScript.
 
-SpaceApp will be available on Heroku. The frontend of SpaceApp is done in React. The backend will use NASA's public APIs. Users and comments will have a backend server made in Node.js and Express, and a database on MongoDB.
+The backend will use NASA's public APIs. Users and comments will have a database on MongoDB.
+
+SpaceApp will be available on Heroku.
 
 ## Functionality in basic version
 ### APOD
@@ -38,4 +41,4 @@ SpaceApp will be available on Heroku. The frontend of SpaceApp is done in React.
 ## Todo / Additional Features
 - more error handling
 - wait animation
-- custom hooks
+- custom hook implementation to SearchForm
