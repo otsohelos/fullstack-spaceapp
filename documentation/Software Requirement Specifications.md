@@ -2,19 +2,15 @@
 
 ## Purpose
 
-SpaceApp is a web-based app that allows a search for NASA's image of the day, weather on Mars, and other NASA data.
-
-## Platform
-
-SpaceApp will be available on Heroku.
+SpaceApp is a web-based app that allows a search for NASA's image of the day, other Nasa images, and the weather on Mars.
 
 ## Users
 
 NasaApp will be browsable without logging in, but will also have a comment function available for logged in users.
 
-## Backend and Databases
+## Platforms and frameworks
 
-NasaApp will use NASA's public APIs as its backend. Comments will have a backend server made by me and a database on MongoDB.
+SpaceApp will be available on Heroku. The frontend of SpaceApp is done in React. The backend will use NASA's public APIs. Users and comments will have a backend server made in Node.js and Express, and a database on MongoDB.
 
 ## Functionality in basic version
 ### APOD
@@ -30,7 +26,7 @@ NasaApp will use NASA's public APIs as its backend. Comments will have a backend
 - Search function for Nasa image database (DONE for single words)
 - Search by keyword(s), year range, media type (image/video)
 
-### Comments
+### Users And Comments
 - Create user account, Login
 - Possibility to leave comments
 - Email notifications for comments
@@ -38,10 +34,8 @@ NasaApp will use NASA's public APIs as its backend. Comments will have a backend
 ### General
 - Error notifications
 
-## Additional features
-These features will be implemented if there's time.
 
-## Todo
+## Todo / Additional Features
 - more error handling
 - wait animation
 - custom hooks
