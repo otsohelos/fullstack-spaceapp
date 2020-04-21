@@ -2,6 +2,8 @@
 
 Full stack practical work by Otso Helos. Full Stack class spring 2020, University of Helsinki.
 
+A build is available on Heroku: [Otso's Space App](https://otsos-space-app.herokuapp.com/)
+
 ## SpaceApp
 
 SpaceApp is a web-based app that allows a search for NASA's image of the day, weather on Mars, and other NASA data.
