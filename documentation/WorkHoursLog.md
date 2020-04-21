@@ -9,6 +9,6 @@
 | 7 Apr | 6 | Building rudimentary backend; comments and image search; first wirking Heroku deployment done |
 | 10 Apr | 4 | SRS cleaned up; search reducer done; search works for single words |
 | 14 Apr | 5 | CSS work; past days' APODs; notifications |
-| 21 Apr |  | Image search function tuning |
+| 21 Apr | 5 | Image search function tuning |
 
-Total hours 29
+**Total hours 34**
