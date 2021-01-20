@@ -10,5 +10,6 @@
 | 10 Apr | 4 | SRS cleaned up; search reducer done; search works for single words |
 | 14 Apr | 5 | CSS work; past days' APODs; notifications |
 | 21 Apr | 5 | Image search function tuning |
+| 22 Jan 2021 | 4 | Re-orienting myself to the work |
 
-**Total hours 34**
+**Total hours 38**
