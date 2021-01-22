@@ -1,7 +1,6 @@
 const cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
-const path = require('path')
 
 const app = express()
 app.use(express.json())
@@ -57,8 +56,7 @@ app.get('/api/comments/:id', (request, response) => {
 })
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'), function(err) {
-    console.log("dirname:", dirname)
+  res.sendFile(path.join(__dirname, '/'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
