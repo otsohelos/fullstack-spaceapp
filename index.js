@@ -55,14 +55,6 @@ app.get('/api/comments/:id', (request, response) => {
   }
 })
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '/'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
-
 const generateId = () => {
   return (Math.random() * 5000)
 }
@@ -86,6 +78,14 @@ app.post('/api/comments', (request, response) => {
     response.json(comment)
   }
 
+})
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
 })
 
 const server = http.createServer(app)
