@@ -11,6 +11,7 @@
 | 14 Apr | 5 | CSS work; past days' APODs; notifications |
 | 21 Apr | 5 | Image search function tuning |
 | 15 Jan 2021 | 4 | Re-orienting myself to the work |
-| 20 Jan | 4 | Update npm, solve Mars weather bug, organise workflow |
+| 20 Jan | 5 | Update npm, solve Mars weather bug, organise workflow |
+| 22 Jan | 5 | Fix marsWeather, try to find solutions for refresh bug |
 
-**Total hours 47**
+**Total hours 52**

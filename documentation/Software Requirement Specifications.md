@@ -39,7 +39,6 @@ SpaceApp will be available on Heroku.
 ### General
 - Error notifications
 
-
 ## Todo / Additional Features
 - more error handling
 - wait animation
