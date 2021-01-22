@@ -1,7 +1,7 @@
 # Work Hours Log
 
 | day | hours | what I did  |
-| :----:|:-----| :-----|
+| :----:|:-----:| :-----|
 | 20 Mar 2020 | 4 | starting project, writing documentation |
 | 25 Mar | 7 | Router, CSS, started work on reducers |
 | 27 Mar | 5 | Mars weather view & reducer added |
