@@ -57,6 +57,7 @@ app.get('/api/comments/:id', (request, response) => {
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '/'), function(err) {
+    console.log("dirname:", dirname)
     if (err) {
       res.status(500).send(err)
     }
