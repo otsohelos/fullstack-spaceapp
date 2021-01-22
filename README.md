@@ -14,4 +14,4 @@ SpaceApp is a web-based app that allows a search for NASA's image of the day, we
 
 [Software Requirements Specification](https://github.com/otsohelos/fullstack-spaceapp/blob/master/documentation/Software%20Requirement%20Specifications.md)
 
-[Bugs and issues](https://github.com/otsohelos/fullstack-spaceapp/blob/master/documentation/BughsAndIssues.md)
+[Bugs and issues](https://github.com/otsohelos/fullstack-spaceapp/blob/master/documentation/BugsAndIssues.md)
