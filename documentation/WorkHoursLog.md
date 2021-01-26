@@ -13,6 +13,6 @@
 | 15 Jan 2021 | 4 | Re-orienting myself to the work |
 | 20 Jan | 5 | Update npm, solve Mars weather bug, organise workflow |
 | 22 Jan | 5 | Fix marsWeather, try to find solutions for refresh bug |
-| 26 Jan | 2 | Add image descriptions to search |
+| 26 Jan | 2 | Add image descriptions to search, other small fixes |
 
 **Total hours 55**
