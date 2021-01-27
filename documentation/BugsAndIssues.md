@@ -6,7 +6,7 @@ Potential solution:
 
 ## Bug: Focus jump to picture when clicking on search result
 Potential solution:
-* jump to img anchor
+* jump to img anchor on clicking search result
 
 ## Issue: Colors are not informative
 * what is a link and what isn't

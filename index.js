@@ -9,10 +9,12 @@ app.use(express.static('build'))
 app.use(cors())
 //const apodRouter = require('./controllers/apod')
 const http = require('http')
+//import { mongo } from 'mongoose'
+const comments =require('./mongo')
 
 app.use(morgan('tiny'))
 
-let comments = [
+/*let comments = [
   {
     id: 1,
     content: "nice work",
@@ -31,7 +33,7 @@ let comments = [
     author: 'carol',
     date: "2020-01-10T19:20:14.298Z"
   }
-]
+]*/
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
