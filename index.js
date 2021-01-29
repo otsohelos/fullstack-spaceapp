@@ -6,15 +6,50 @@ const app = express()
 app.use(express.json())
 app.use(express.static('build'))
 
+require('dotenv').config()
+
 app.use(cors())
 //const apodRouter = require('./controllers/apod')
 const http = require('http')
 //import { mongo } from 'mongoose'
-const comments =require('./mongo')
 
 app.use(morgan('tiny'))
+const mongoose = require('mongoose')
 
-/*let comments = [
+if (process.argv.length < 3) {
+  console.log('give password as argument')
+  process.exit(1)
+}
+
+const password = process.argv[2]
+
+const url =
+  `mongodb+srv://otsohelos:${password}@otsonekaklusteri.2k1he.mongodb.net/spaceapp?retryWrites=true&w=majority`
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
+
+const commentSchema = new mongoose.Schema({
+  content: String,
+  date: Date,
+  user: String,
+})
+
+const Comment = mongoose.model('Comment', commentSchema)
+
+/*const comment = new Comment({
+  content: 'Don\'t believe everything you read on the internet',
+  date: new Date(),
+  user: 'Albert Einstein'
+})
+
+const comments = []
+
+Comment.find({}).then(result => {
+  comments = result
+  console.log(comments)
+  mongoose.connection.close()
+})
+let comments = [
   {
     id: 1,
     content: "nice work",
@@ -44,7 +79,9 @@ app.get('/api/info', (req, res) => {
 })
 
 app.get(('/api/comments'), (req, res) => {
-  res.send(comments)
+  Comment.find({}).then(comments => {
+    res.json(comments.map(comm => comm.toJSON()))
+  })
 })
 
 app.get('/api/comments/:id', (request, response) => {
@@ -82,8 +119,8 @@ app.post('/api/comments', (request, response) => {
 
 })
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'), function(err) {
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'), function (err) {
     if (err) {
       res.status(500).send(err)
     }

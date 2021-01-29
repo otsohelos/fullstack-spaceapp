@@ -15,5 +15,6 @@
 | 22 Jan | 5 | Fix marsWeather, try to find solutions for refresh bug |
 | 26 Jan | 2 | Add image descriptions to search, other small fixes |
 | 27 Jan | 2 | Setting up Mongo database for comments |
+| 28 Jan | 5 | Setting up Mongo |
 
-**Total hours 55**
+**Total hours 57**
