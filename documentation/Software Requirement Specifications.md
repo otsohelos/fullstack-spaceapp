@@ -31,7 +31,8 @@ SpaceApp will be available on Heroku.
 - Search function for Nasa image database (DONE for single words)
 - Search by keyword(s), year range, media type (image/video)
 - Info popup about search
-- Info about results: what was searched, how mahy results, "No results" info if no results
+- Info about results: what was searched, how many results
+- DONE: "No results" info if no results
 
 ### Users And Comments
 - Create user account, Login
@@ -41,7 +42,6 @@ SpaceApp will be available on Heroku.
 ### General
 - Error notifications
 
-## Todo / Additional Features
-- more error handling
+## Additional Features
 - wait animation
 - custom hook implementation to SearchForm

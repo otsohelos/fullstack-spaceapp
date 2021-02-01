@@ -11,7 +11,6 @@ require('dotenv').config()
 app.use(cors())
 //const apodRouter = require('./controllers/apod')
 const http = require('http')
-//import { mongo } from 'mongoose'
 
 app.use(morgan('tiny'))
 const mongoose = require('mongoose')
