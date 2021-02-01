@@ -16,5 +16,6 @@
 | 26 Jan | 2 | Add image descriptions to search, other small fixes |
 | 27 Jan | 2 | Setting up Mongo database for comments |
 | 28 Jan | 5 | Setting up Mongo |
+| 1 Feb | 2 | Working on Mongo |
 
-**Total hours 57**
+**Total hours 64**

@@ -18,7 +18,9 @@ SpaceApp will be available on Heroku.
 ## Functionality in basic version
 ### APOD
 - DONE: Astronomy Picture of the Day, with copyright info, link to Nasa's APOD page, and togglable description
-- Past APODs
+- DONE: Past APODs
+- functionality to render APOD when it's a video
+- APOD description with links and paragraph formatting
 
 ### Mars Weather
 - DONE: Weather info from Mars for current day
