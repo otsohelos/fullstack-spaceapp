@@ -16,15 +16,14 @@ const http = require('http')
 app.use(morgan('tiny'))
 const mongoose = require('mongoose')
 
-if (process.argv.length < 3) {
+/*if (process.argv.length < 3) {
   console.log('give password as argument')
   process.exit(1)
-}
+}*/
 
-const password = process.argv[2]
+//const password = process.argv[2]
 
-const url =
-  `mongodb+srv://otsohelos:${password}@otsonekaklusteri.2k1he.mongodb.net/spaceapp?retryWrites=true&w=majority`
+const url = process.env.MONGODB_URI
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
 
