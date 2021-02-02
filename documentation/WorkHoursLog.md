@@ -17,5 +17,6 @@
 | 27 Jan | 2 | Setting up Mongo database for comments |
 | 28 Jan | 5 | Setting up Mongo |
 | 1 Feb | 2 | Working on Mongo |
+| 2 Feb | 3 | Backend refactoring, add structure for user management |
 
-**Total hours 64**
+**Total hours 67**

@@ -1,72 +1,22 @@
-const cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
 
 const app = express()
-app.use(express.json())
+const cors = require('cors')
 app.use(express.static('build'))
+app.use(express.json())
 
-require('dotenv').config()
+const commentsRouter = require('./controllers/comments')
+const usersRouter = require('./controllers/users')
 
 app.use(cors())
 //const apodRouter = require('./controllers/apod')
 const http = require('http')
 
 app.use(morgan('tiny'))
-const mongoose = require('mongoose')
+app.use('/api/comments', commentsRouter)
+app.use('/api/users', usersRouter)
 
-/*if (process.argv.length < 3) {
-  console.log('give password as argument')
-  process.exit(1)
-}*/
-
-//const password = process.argv[2]
-
-const url = process.env.MONGODB_URI
-
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-
-const commentSchema = new mongoose.Schema({
-  content: String,
-  date: Date,
-  user: String,
-})
-
-const Comment = mongoose.model('Comment', commentSchema)
-
-/*const comment = new Comment({
-  content: 'Don\'t believe everything you read on the internet',
-  date: new Date(),
-  user: 'Albert Einstein'
-})
-
-const comments = []
-
-Comment.find({}).then(result => {
-  comments = result
-  console.log(comments)
-  mongoose.connection.close()
-})
-let comments = [
-  {
-    id: 1,
-    content: "nice work",
-    date: "2020-01-10T17:30:31.098Z",
-    author: 'alice'
-  },
-  {
-    id: 2,
-    content: "witty comment",
-    date: "2020-01-10T18:39:34.091Z",
-    author: 'bob'
-  },
-  {
-    id: 3,
-    content: "I love space!",
-    author: 'carol',
-    date: "2020-01-10T19:20:14.298Z"
-  }
-]*/
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
@@ -76,26 +26,10 @@ app.get('/api/info', (req, res) => {
   res.send('Here be info.')
 })
 
-app.get(('/api/comments'), (req, res) => {
-  Comment.find({}).then(comments => {
-    res.json(comments.map(comm => comm.toJSON()))
-  })
-})
-
-app.get('/api/comments/:id', (request, response) => {
-  const id = Number(request.params.id)
-  const comment = comments.find(comm => comm.id === id)
-  if (comment) {
-    response.json(comment)
-  } else {
-    response.status(404).end()
-  }
-})
-
 const generateId = () => {
   return (Math.random() * 5000)
 }
-
+/* 
 app.post('/api/comments', (request, response) => {
   const body = request.body
   if (!body.content || !body.author) {
@@ -116,7 +50,7 @@ app.post('/api/comments', (request, response) => {
   }
 
 })
-
+ */
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'index.html'), function (err) {
     if (err) {
