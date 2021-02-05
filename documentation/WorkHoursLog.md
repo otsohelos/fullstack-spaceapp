@@ -21,4 +21,4 @@
 | 4 Feb | 1 | Debugging Mars weather, start separating app.js from index.js |
 | 5 Feb | 4 | Refactoring, frontend styling |
 
-**Total hours 68**
+**Total hours 72**
