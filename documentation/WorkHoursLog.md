@@ -2,7 +2,7 @@
 
 | day | hours | what I did  |
 | :----:|:-----:| :-----|
-| 20 Mar 2020 | 4 | starting project, writing documentation |
+| 20 Mar 2020 | 4 | Starting project, writing documentation |
 | 25 Mar | 7 | Router, CSS, started work on reducers |
 | 27 Mar | 5 | Mars weather view & reducer added |
 | 3 Apr | 3 | Building the app for Heroku |
@@ -19,5 +19,6 @@
 | 1 Feb | 2 | Working on Mongo |
 | 2 Feb | 3 | Backend refactoring, add structure for user management |
 | 4 Feb | 1 | Debugging Mars weather, start separating app.js from index.js |
+| 5 Feb |  |  |
 
-**Total hours 67**
+**Total hours 68**
