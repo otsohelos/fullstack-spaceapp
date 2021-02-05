@@ -19,6 +19,6 @@
 | 1 Feb | 2 | Working on Mongo |
 | 2 Feb | 3 | Backend refactoring, add structure for user management |
 | 4 Feb | 1 | Debugging Mars weather, start separating app.js from index.js |
-| 5 Feb |  | Refactoring |
+| 5 Feb |  | Refactoring, frontend styling |
 
 **Total hours 68**
