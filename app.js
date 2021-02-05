@@ -10,8 +10,6 @@ const commentsRouter = require('./controllers/comments')
 const usersRouter = require('./controllers/users')
 
 app.use(cors())
-//const apodRouter = require('./controllers/apod')
-const http = require('http')
 
 app.use(morgan('tiny'))
 app.use('/api/comments', commentsRouter)
@@ -26,10 +24,11 @@ app.get('/api/info', (req, res) => {
   res.send('Here be info.')
 })
 
+/*
 const generateId = () => {
   return (Math.random() * 5000)
 }
-/* 
+
 app.post('/api/comments', (request, response) => {
   const body = request.body
   if (!body.content || !body.author) {
