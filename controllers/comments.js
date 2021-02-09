@@ -1,9 +1,10 @@
 const commentsRouter = require('express').Router()
 const Comment = require('../models/comment')
-require('dotenv').config()
+
 
 commentsRouter.get('/', async (request, response) => {
-  const comments = await Comment.find({})
+  const comments = await Comment
+    .find({})
   response.json(comments.map(comm => comm.toJSON()))
 })
 
