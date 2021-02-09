@@ -20,5 +20,6 @@
 | 2 Feb | 3 | Backend refactoring, add structure for user management |
 | 4 Feb | 1 | Debugging Mars weather, start separating app.js from index.js |
 | 5 Feb | 4 | Refactoring, frontend styling |
+| 9 Feb |  |  |
 
 **Total hours 72**

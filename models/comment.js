@@ -1,16 +1,5 @@
 const mongoose = require('mongoose')
-require('dotenv').config()
 
-const uri = process.env.MONGODB_URI
-
-console.log('connecting to', uri)
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-  .then(result => {
-    console.log('connected to MongoDB')
-  })
-  .catch((error) => {
-    console.log('error connecting to MongoDB:', error.message)
-  })
 
 
 const commentSchema = new mongoose.Schema({
