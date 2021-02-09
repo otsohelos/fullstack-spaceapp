@@ -22,4 +22,4 @@
 | 5 Feb | 4 | Refactoring, frontend styling |
 | 9 Feb | 4 | Video displaying for APOD, backend testing |
 
-**Total hours 76  **
+**Total hours 76**
