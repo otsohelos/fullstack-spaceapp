@@ -23,7 +23,9 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
   })
 
 app.use(morgan('tiny'))
+
 app.use('/api/comments', commentsRouter)
+
 app.use('/api/users', usersRouter)
 
 
