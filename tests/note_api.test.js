@@ -1,44 +1,45 @@
 const supertest = require('supertest')
 const mongoose = require('mongoose')
 const helper = require('./test_helper')
-const app = require('../index')
+const app = require('../app')
 const api = supertest(app)
 
 const Comment = require('../models/comment')
 const User = require('../models/user')
-/*
-describe('when there is initially some notes saved', () => {
-  beforeEach(async () => {
-    await Note.deleteMany({})
 
-    const noteObjects = helper.initialNotes
-      .map(note => new Note(note))
-    const promiseArray = noteObjects.map(note => note.save())
+describe('when there is initially some comments saved', () => {
+  beforeEach(async () => {
+    await Comment.deleteMany({})
+
+    const commentObjects = helper.initialComments
+      .map(comm => new Comment(comm))
+    const promiseArray = commentObjects.map(comm => comm.save())
     await Promise.all(promiseArray)
   })
 
-  test('notes are returned as json', async () => {
+  test('comments are returned as json', async () => {
     await api
-      .get('/api/notes')
+      .get('/api/comments')
       .expect(200)
       .expect('Content-Type', /application\/json/)
   })
 
-  test('all notes are returned', async () => {
-    const response = await api.get('/api/notes')
+  test('all comments are returned', async () => {
+    const response = await api.get('/api/comments')
 
-    expect(response.body.length).toBe(helper.initialNotes.length)
+    expect(response.body.length).toBe(helper.initialComments.length)
   })
 
-  test('a specific note is within the returned notes', async () => {
-    const response = await api.get('/api/notes')
+  test('a specific comment is within the returned comments', async () => {
+    const response = await api.get('/api/comments')
 
     const contents = response.body.map(r => r.content)
     expect(contents).toContain(
-      'Browser can execute only Javascript'
+      'Hey ho here we go'
     )
   })
-
+})
+/*
   describe('viewing a specific note', () => {
 
     test('succeeds with a valid id', async () => {

@@ -8,19 +8,25 @@ commentsRouter.get('/', async (request, response) => {
   response.json(comments.map(comm => comm.toJSON()))
 })
 
-/* // below is copy-paste from elsewhere, not usable as such!!
-notesRouter.post('/', async (request, response) => {
+commentsRouter.post('/', async (request, response) => {
   const body = request.body
 
-  const note = new Note({
+  const comment = new Comment({
     content: body.content,
     important: body.important === undefined ? false : body.important,
     date: new Date(),
   })
 
-  const savedNote = await note.save()
-  response.json(savedNote.toJSON())
+  const savedComment = await comment.save()
+  response.json(savedComment.toJSON())
 })
+
+commentsRouter.delete('/:id', async (request, response) => {
+  await Comment.findByIdAndRemove(request.params.id)
+  response.status(204).end()
+})
+
+/* // below is copy-paste from elsewhere, not usable as such!!
 
 notesRouter.get('/:id', async (request, response) => {
   const note = await Note.findById(request.params.id)
@@ -46,9 +52,6 @@ notesRouter.put('/:id', (request, response, next) => {
     .catch(error => next(error))
 })
 
-notesRouter.delete('/:id', async (request, response) => {
-  await Note.findByIdAndRemove(request.params.id)
-  response.status(204).end()
-})*/
+*/
 
 module.exports = commentsRouter

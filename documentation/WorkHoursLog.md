@@ -21,5 +21,6 @@
 | 4 Feb | 1 | Debugging Mars weather, start separating app.js from index.js |
 | 5 Feb | 4 | Refactoring, frontend styling |
 | 9 Feb | 4 | Video displaying for APOD, backend testing |
+| 11 Feb | 3 | Comments bug fix, first real tests |
 
-**Total hours 76**
+**Total hours 79**
