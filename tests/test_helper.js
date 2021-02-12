@@ -10,6 +10,20 @@ const initialComments = [
   }
 ]
 
+
+
+/* const initialComments = [
+  {
+    content: 'Space is kinda big',
+  },
+  {
+    content: 'Don\'t believe everything you read on the internet',
+  },
+  {
+    content: 'Good work!'
+  }
+] */
+
 const nonExistingId = async () => {
   const comment = new Comment({ content: 'willremovethissoon' })
   await comment.save()

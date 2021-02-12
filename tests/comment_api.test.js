@@ -39,41 +39,68 @@ describe('when there is initially some comments saved', () => {
     )
   })
 })
-/*
-  describe('viewing a specific note', () => {
 
-    test('succeeds with a valid id', async () => {
-      const notesAtStart = await helper.notesInDb()
+describe('deletion of a comment', () => {
+  test('succeeds with status code 204 if id is valid', async () => {
+    const commentsAtStart = await helper.commentsInDb()
+    //console.log('commentsAtStart:', commentsAtStart)
+    const commentToDelete = commentsAtStart[0]
+    //console.log('commentToDelete', commentToDelete)
 
-      const noteToView = notesAtStart[0]
+    await api
+      .delete(`/api/comments/${commentToDelete.id}`)
+      .expect(204)
 
-      const resultNote = await api
-        .get(`/api/notes/${noteToView.id}`)
-        .expect(200)
-        .expect('Content-Type', /application\/json/)
+    const commentsAtEnd = await helper.commentsInDb()
 
-      expect(resultNote.body).toEqual(noteToView)
-    })
+    expect(commentsAtEnd.length).toBe(
+      helper.initialComments.length - 1
+    )
 
-    test('fails with statuscode 404 if note does not exist', async () => {
-      const validNonexistingId = await helper.nonExistingId()
+    const contents = commentsAtEnd.map(c => c.content)
 
-      console.log(validNonexistingId)
+    expect(contents).not.toContain(commentToDelete.content)
+  })
+})
 
-      await api
-        .get(`/api/notes/${validNonexistingId}`)
-        .expect(404)
-    })
+describe('viewing a specific comment', () => {
 
-    test('fails with statuscode 400 id is invalid', async () => {
-      const invalidId = '5a3d5da59070081a82a3445'
+  test('succeeds with a valid id', async () => {
+    const commentsAtStart = await helper.commentsInDb()
 
-      await api
-        .get(`/api/notes/${invalidId}`)
-        .expect(400)
-    })
+    const commentToView = commentsAtStart[0]
+
+    const resultComment = await api
+      .get(`/api/comments/${commentToView.id}`)
+      .expect(200)
+      .expect('Content-Type', /application\/json/)
+
+    expect(resultComment.body).toEqual(commentToView)
   })
 
+  test('fails with statuscode 404 if comment does not exist', async () => {
+    const validNonexistingId = await helper.nonExistingId()
+
+    console.log(validNonexistingId)
+
+    await api
+      .get(`/api/comments/${validNonexistingId}`)
+      .expect(404)
+  })
+
+  test('fails with statuscode 400 id is invalid', async () => {
+    const invalidId = '5a3d5da59070081a82a3445'
+
+    await api
+      .get(`/api/comments/${invalidId}`)
+      .expect(400)
+  })
+})
+
+
+// below is copy-paste from elsewhere
+// not usable as such
+/*
   describe('addition of a new note', () => {
     test('succeeds with valid data', async () => {
       const newNote = {
@@ -113,26 +140,6 @@ describe('when there is initially some comments saved', () => {
     })
   })
 
-  describe('deletion of a note', () => {
-    test('succeeds with status code 204 if id is valid', async () => {
-      const notesAtStart = await helper.notesInDb()
-      const noteToDelete = notesAtStart[0]
-
-      await api
-        .delete(`/api/notes/${noteToDelete.id}`)
-        .expect(204)
-
-      const notesAtEnd = await helper.notesInDb()
-
-      expect(notesAtEnd.length).toBe(
-        helper.initialNotes.length - 1
-      )
-
-      const contents = notesAtEnd.map(r => r.content)
-
-      expect(contents).not.toContain(noteToDelete.content)
-    })
-  })
 
   describe('when there is initially one user at db', () => {
     beforeEach(async () => {

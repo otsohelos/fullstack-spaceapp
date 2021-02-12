@@ -22,20 +22,20 @@ commentsRouter.post('/', async (request, response) => {
 })
 
 commentsRouter.delete('/:id', async (request, response) => {
-  await Comment.findByIdAndRemove(request.params.id)
+  await Comment.findByIdAndDelete(request.params.id)
   response.status(204).end()
 })
 
-/* // below is copy-paste from elsewhere, not usable as such!!
-
-notesRouter.get('/:id', async (request, response) => {
-  const note = await Note.findById(request.params.id)
-  if (note) {
-    response.json(note.toJSON())
+commentsRouter.get('/:id', async (request, response) => {
+  const comment = await Comment.findById(request.params.id)
+  if (comment) {
+    response.json(comment.toJSON())
   } else {
     response.status(404).end()
   }
 })
+
+/* // below is copy-paste from elsewhere, not usable as such!!
 
 notesRouter.put('/:id', (request, response, next) => {
   const body = request.body
