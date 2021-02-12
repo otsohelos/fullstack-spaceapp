@@ -43,7 +43,7 @@ describe('when there is initially some comments saved', () => {
 describe('deletion of a comment', () => {
   test('succeeds with status code 204 if id is valid', async () => {
     const commentsAtStart = await helper.commentsInDb()
-    //console.log('commentsAtStart:', commentsAtStart)
+    console.log('commentsAtStart:', commentsAtStart)
     const commentToDelete = commentsAtStart[0]
     //console.log('commentToDelete', commentToDelete)
 
