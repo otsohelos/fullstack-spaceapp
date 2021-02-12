@@ -43,7 +43,7 @@ describe('when there is initially some comments saved', () => {
 describe('deletion of a comment', () => {
   test('succeeds with status code 204 if id is valid', async () => {
     const commentsAtStart = await helper.commentsInDb()
-    console.log('commentsAtStart:', commentsAtStart)
+    //console.log('commentsAtStart:', commentsAtStart)
     const commentToDelete = commentsAtStart[0]
     //console.log('commentToDelete', commentToDelete)
 
@@ -97,78 +97,87 @@ describe('viewing a specific comment', () => {
   })
 })
 
+describe('addition of a new comment', () => {
+  beforeEach(async () => {
+    await Comment.deleteMany({})
+
+    const commentObjects = helper.initialComments
+      .map(comm => new Comment(comm))
+    const promiseArray = commentObjects.map(comm => comm.save())
+    await Promise.all(promiseArray)
+  })
+  test('succeeds with valid data', async () => {
+    const newComment = {
+      content: 'space is mostly empty.',
+      important: true,
+    }
+
+    await api
+      .post('/api/comments')
+      .send(newComment)
+      .expect(200)
+      .expect('Content-Type', /application\/json/)
+
+
+    const commentsAtEnd = await helper.commentsInDb()
+    expect(commentsAtEnd.length).toBe(helper.initialComments.length + 1)
+
+    const contents = commentsAtEnd.map(c => c.content)
+    expect(contents).toContain(
+      'space is mostly empty.'
+    )
+  })
+
+  test('fails with status code 400 if data invalid', async () => {
+    const newComment = {
+      important: true
+    }
+
+    await api
+      .post('/api/comments')
+      .send(newComment)
+      .expect(400)
+
+    const commentsAtEnd = await helper.commentsInDb()
+
+    expect(commentsAtEnd.length).toBe(helper.initialComments.length)
+  })
+})
+
+
+describe('when there is initially one user at db', () => {
+  beforeEach(async () => {
+    await User.deleteMany({})
+    const user = new User({ username: 'root', password: 'sekret' })
+    await user.save()
+  })
+
+  test('creation succeeds with a fresh username', async () => {
+    const usersAtStart = await helper.usersInDb()
+
+    const newUser = {
+      username: 'ohelos',
+      name: 'Otso Helos',
+      password: 'supersecret',
+    }
+
+    await api
+      .post('/api/users')
+      .send(newUser)
+      .expect(200)
+      .expect('Content-Type', /application\/json/)
+
+    const usersAtEnd = await helper.usersInDb()
+    expect(usersAtEnd.length).toBe(usersAtStart.length + 1)
+
+    const usernames = usersAtEnd.map(u => u.username)
+    expect(usernames).toContain(newUser.username)
+  })
+})
 
 // below is copy-paste from elsewhere
 // not usable as such
 /*
-  describe('addition of a new note', () => {
-    test('succeeds with valid data', async () => {
-      const newNote = {
-        content: 'async/await simplifies making async calls',
-        important: true,
-      }
-
-      await api
-        .post('/api/notes')
-        .send(newNote)
-        .expect(200)
-        .expect('Content-Type', /application\/json/)
-
-
-      const notesAtEnd = await helper.notesInDb()
-      expect(notesAtEnd.length).toBe(helper.initialNotes.length + 1)
-
-      const contents = notesAtEnd.map(n => n.content)
-      expect(contents).toContain(
-        'async/await simplifies making async calls'
-      )
-    })
-
-    test('fails with status code 400 if data invalid', async () => {
-      const newNote = {
-        important: true
-      }
-
-      await api
-        .post('/api/notes')
-        .send(newNote)
-        .expect(400)
-
-      const notesAtEnd = await helper.notesInDb()
-
-      expect(notesAtEnd.length).toBe(helper.initialNotes.length)
-    })
-  })
-
-
-  describe('when there is initially one user at db', () => {
-    beforeEach(async () => {
-      await User.deleteMany({})
-      const user = new User({ username: 'root', password: 'sekret' })
-      await user.save()
-    })
-
-    test('creation succeeds with a fresh username', async () => {
-      const usersAtStart = await helper.usersInDb()
-
-      const newUser = {
-        username: 'mluukkai',
-        name: 'Matti Luukkainen',
-        password: 'salainen',
-      }
-
-      await api
-        .post('/api/users')
-        .send(newUser)
-        .expect(200)
-        .expect('Content-Type', /application\/json/)
-
-      const usersAtEnd = await helper.usersInDb()
-      expect(usersAtEnd.length).toBe(usersAtStart.length + 1)
-
-      const usernames = usersAtEnd.map(u => u.username)
-      expect(usernames).toContain(newUser.username)
-    })
 
     test('creation fails with proper statuscode and message if username already taken', async () => {
       const usersAtStart = await helper.usersInDb()
