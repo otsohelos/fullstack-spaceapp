@@ -13,6 +13,7 @@ const middleware = require('./utils/middleware')
 
 const mongoose = require('mongoose')
 const logger = require('./utils/logger')
+const path = require('path');
 
 
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -43,21 +44,19 @@ app.get('/', (req, res) => {
 app.get('/api/info', (req, res) => {
   res.send('Here be info.')
 })
+// this is supposed to redirect calls to sub-pages back to front page
+// and prevent the 'cannot GET' error
+// but it doesn't work yet
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
+
 
 app.use(middleware.requestLogger)
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 
 
-// this is supposed to redirect calls to sub-pages back to front page
-// and prevent the 'cannot GET' error
-// but it doesn't work yet
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'), function (err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
+
 
 module.exports = app
