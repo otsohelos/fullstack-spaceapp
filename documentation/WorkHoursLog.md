@@ -23,5 +23,6 @@
 | 9 Feb | 4 | Video displaying for APOD, backend testing |
 | 11 Feb | 3 | Comments bug fix, first real tests |
 | 12 Feb | 4 | Testing, refactoring |
+| 15 Feb | 1 | debugging "cannot GET" error |
 
-**Total hours 83**
+**Total hours 84**
