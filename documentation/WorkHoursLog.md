@@ -24,6 +24,6 @@
 | 11 Feb | 3 | Comments bug fix, first real tests |
 | 12 Feb | 4 | Testing, refactoring |
 | 15 Feb | 1 | debugging "cannot GET" error |
-| 16 Feb |  | Frontend fixes |
+| 16 Feb | 2 | Frontend fixes, start building login function |
 
-**Total hours 84**
+**Total hours 86**
