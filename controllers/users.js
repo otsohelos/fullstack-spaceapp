@@ -5,6 +5,7 @@ const User = require('../models/user')
 usersRouter.post('/', async (request, response) => {
   const body = request.body
 
+  console.log('body:', body)
   const saltRounds = 10
   const passwordHash = await bcrypt.hash(body.password, saltRounds)
 
@@ -17,6 +18,12 @@ usersRouter.post('/', async (request, response) => {
   const savedUser = await user.save()
 
   response.json(savedUser)
+})
+
+usersRouter.get('/', async (request, response) => {
+  const users = await User
+    .find({})
+  response.json(users.map(user => user.toJSON()))
 })
 
 module.exports = usersRouter
