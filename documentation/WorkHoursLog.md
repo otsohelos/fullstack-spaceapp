@@ -26,6 +26,6 @@
 | 15 Feb | 1 | debugging "cannot GET" error |
 | 16 Feb | 2 | Frontend fixes, start building login function |
 | 17 Feb | 2 | Login frontend |
-| 19 Feb | 1 | Users management |
+| 19 Feb | 4 | User management, comments backend work |
 
-**Total hours 89**
+**Total hours 92**

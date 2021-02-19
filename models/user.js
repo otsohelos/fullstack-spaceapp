@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
   },
   name: String,
   passwordHash: String,
-  notes: [
+  comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Comment'

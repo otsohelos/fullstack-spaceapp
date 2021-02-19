@@ -9,6 +9,7 @@ const cors = require('cors')
 
 const commentsRouter = require('./controllers/comments')
 const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 const middleware = require('./utils/middleware')
 
 const mongoose = require('mongoose')
@@ -36,6 +37,7 @@ app.use('/api/comments', commentsRouter)
 
 app.use('/api/users', usersRouter)
 
+app.use('/api/login', loginRouter)
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
