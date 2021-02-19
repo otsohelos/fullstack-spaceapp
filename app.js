@@ -44,9 +44,7 @@ app.get('/', (req, res) => {
 app.get('/api/info', (req, res) => {
   res.send('Here be info.')
 })
-// this is supposed to redirect calls to sub-pages back to front page
-// and prevent the 'cannot GET' error
-// but it doesn't work yet
+// this redirects calls to sub-pages to the right page from the backend
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
