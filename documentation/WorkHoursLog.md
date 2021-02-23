@@ -27,6 +27,6 @@
 | 16 Feb | 2 | Frontend fixes, start building login function |
 | 17 Feb | 2 | Login frontend |
 | 19 Feb | 4 | User management, comments backend work |
-| 23 Feb |  |  |
+| 23 Feb | 2 | User management |
 
-**Total hours 92**
+**Total hours 94**
