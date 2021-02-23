@@ -15,7 +15,7 @@ const getTokenFrom = request => {
 
 commentsRouter.get('/', async (request, response) => {
   const comments = await Comment
-    .find({})//.populate('user')
+    .find({}).populate('user')
     // the 'populate' causes a bug
   response.json(comments.map(comm => comm.toJSON()))
 })
