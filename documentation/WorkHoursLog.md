@@ -29,5 +29,6 @@
 | 19 Feb | 4 | User management, comments backend work |
 | 23 Feb | 2 | User management |
 | 25 Feb | 2 | User login frontend |
+| 26 Feb | | Login frontend |
 
 **Total hours 96**
