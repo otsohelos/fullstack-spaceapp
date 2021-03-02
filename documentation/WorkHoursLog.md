@@ -30,6 +30,6 @@
 | 23 Feb | 2 | User management |
 | 25 Feb | 2 | User login frontend |
 | 26 Feb | 6 | Login frontend, notification tweaking |
-| 2 Mar |  | Backend testing |
+| 2 Mar | 3 | Backend testing, signup frontend |
 
-**Total hours 102**
+**Total hours 105**
