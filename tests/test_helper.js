@@ -10,6 +10,7 @@ const initialComments = [
   }
 ]
 
+const testUser = { username: "root", password: "supersecret" };
 
 
 /* const initialComments = [
@@ -43,5 +44,5 @@ const usersInDb = async () => {
 }
 
 module.exports = {
-  initialComments, nonExistingId, commentsInDb, usersInDb
+  initialComments, nonExistingId, commentsInDb, usersInDb, testUser
 }
