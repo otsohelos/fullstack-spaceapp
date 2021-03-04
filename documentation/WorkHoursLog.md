@@ -32,5 +32,6 @@
 | 26 Feb | 6 | Login frontend, notification tweaking |
 | 2 Mar | 3 | Backend testing, signup frontend |
 | 3 Mar | 1 | Login and signup fields togglable |
+| 4 Mar | 3 | Remove comment function |
 
-**Total hours 106**
+**Total hours 109**
