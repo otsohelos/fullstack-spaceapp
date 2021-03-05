@@ -33,5 +33,6 @@
 | 2 Mar | 3 | Backend testing, signup frontend |
 | 3 Mar | 1 | Login and signup fields togglable |
 | 4 Mar | 4 | Function to remove comments, signup frontend work |
+| 5 Mar | 1 | Building reducer for comments |
 
-**Total hours 110**
+**Total hours 111**
