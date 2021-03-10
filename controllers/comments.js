@@ -33,10 +33,11 @@ commentsRouter.post('/', async (request, response) => {
   const comment = new Comment({
     content: body.content,
     date: new Date(),
-    user: user._id
+    user: user
   })
 
   const savedComment = await comment.save()
+  
   user.comments = user.comments.concat(savedComment._id)
   await user.save()
 
