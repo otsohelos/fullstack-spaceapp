@@ -10,7 +10,7 @@ const User = require('../models/user')
 
 const getTokenHeader = async () => {
   const result = await api.post("/api/login").send(helper.testUser);
-  return `Bearer ${result.body.token}`;
+  return `bearer ${result.body.token}`;
 };
 
 describe('when there is initially some comments saved', () => {
@@ -116,8 +116,7 @@ describe('addition of a new comment', () => {
     const tokenHeader = await getTokenHeader();
 
     const newComment = {
-      content: 'space is mostly empty.',
-      important: true,
+      content: 'space is mostly empty.'
     }
 
     await api

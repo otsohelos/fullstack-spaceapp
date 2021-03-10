@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken')
 
 const getTokenFrom = request => {
   const authorization = request.get('authorization')
+  //console.log('authorization', authorization)
   if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
     return authorization.substring(7)
   }
@@ -16,12 +17,12 @@ const getTokenFrom = request => {
 commentsRouter.get('/', async (request, response) => {
   const comments = await Comment
     .find({}).populate('user')
-    // the 'populate' causes a bug
   response.json(comments.map(comm => comm.toJSON()))
 })
 
 commentsRouter.post('/', async (request, response) => {
   const body = request.body
+  console.log('request', request)
   const token = getTokenFrom(request)
   const decodedToken = jwt.verify(token, process.env.SECRET)
   if (!token || !decodedToken.id) {
