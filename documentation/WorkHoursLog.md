@@ -35,6 +35,6 @@
 | 4 Mar | 4 | Function to remove comments, signup frontend work |
 | 5 Mar | 1 | Building reducer for comments |
 | 9 Mar | 2 | Evaluating the last week's tasks, next and previous search pages, some CSS |
-| 10 Mar |  | Refactoring and cleaning code |
+| 10 Mar |  | Refactoring and cleaning code, debugging |
 
 **Total hours 113**
