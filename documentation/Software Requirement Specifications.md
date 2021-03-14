@@ -19,7 +19,6 @@ SpaceApp will be available on Heroku.
 ### APOD
 - DONE: Astronomy Picture of the Day, with copyright info, link to Nasa's APOD page, and togglable description
 - DONE: Past APODs
-- functionality to render APOD when it's a video
 - APOD description with links and paragraph formatting
 
 ### Mars Weather
@@ -30,18 +29,16 @@ SpaceApp will be available on Heroku.
 ### Image Search
 - Search function for Nasa image database (DONE for single words)
 - Search by keyword(s), year range, media type (image/video)
-- Info popup about search
 - Info about results: what was searched, how many results
 - DONE: "No results" info if no results
 
 ### Users And Comments
-- Create user account, Login
-- Possibility to leave comments
+- DONE: Create user account, Login
+- DONE: Possibility to leave comments
 - Email notifications for comments
 
 ### General
-- Error notifications
+- DONE: Error notifications
 
 ## Additional Features
-- wait animation
 - custom hook implementation to SearchForm
