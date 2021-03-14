@@ -8,6 +8,9 @@ By default, APOD displays today's Astronomy Picture of the Day from NASA. On the
 ## Mars Weather
 As the name suggests, Mars Weather displays weather data from Mars, as given by the open API from NASA's InSight lander.
 
+## Image search
+Image search searches the Nasa image and video library. You can use single or multiple keywords. Speacial search operators are not supported.
+
 ## Comments
 User registration and comment function. You do not have to be logged in to read comments, but you need to register and log in to leave one. Logged in users can also remove their own comments.
 
