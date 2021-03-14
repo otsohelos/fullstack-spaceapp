@@ -36,5 +36,6 @@
 | 5 Mar | 1 | Building reducer for comments |
 | 9 Mar | 2 | Evaluating the last week's tasks, next and previous search pages, some CSS |
 | 10 Mar | 7 | Refactoring and cleaning code, debugging |
+| 14 Mar | 3 | Debugging, final fixes, cleaning code |
 
-**Total hours 120**
+**Total hours 123**
